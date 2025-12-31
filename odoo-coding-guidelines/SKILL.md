@@ -1,6 +1,8 @@
-| name | description | license |
-| --- | --- | --- |
-| odoo-coding-guidelines | Comprehensive Odoo coding guidelines covering module structure, XML files, Python, JavaScript, and CSS/SCSS conventions for developing Odoo applications. Use when working on Odoo module development, following Odoo coding standards, or maintaining Odoo codebases. | Apache License 2.0 |
+---
+name: odoo-coding-guidelines
+description: "Comprehensive Odoo coding guidelines covering module structure, XML files, Python, JavaScript, and CSS/SCSS conventions for developing Odoo applications. Use when working on Odoo module development, following Odoo coding standards, or maintaining Odoo codebases."
+license: Apache License 2.0
+---
 
 # Odoo Coding Guidelines
 
