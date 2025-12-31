@@ -1,4 +1,8 @@
-## Coding guidelines
+| name | description | license |
+| --- | --- | --- |
+| odoo-coding-guidelines | Comprehensive Odoo coding guidelines covering module structure, XML files, Python, JavaScript, and CSS/SCSS conventions for developing Odoo applications. Use when working on Odoo module development, following Odoo coding standards, or maintaining Odoo codebases. | Apache License 2.0 |
+
+# Odoo Coding Guidelines
 
 This page introduces the Odoo Coding Guidelines. Those aim to improve the
 quality of Odoo Apps code. Indeed proper code improves readability, eases
