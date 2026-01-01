@@ -1307,7 +1307,7 @@ The above code may feel safe as the message content is controlled but is a bad p
 
 ### Creating safe content using Markup
 
-See official documentation for explanations, but the big advantage of `Markup` is that it's a very rich type over `str` operations to _automatically escape parameters_.
+See official documentation for explanations, but the big advantage of `Markup` is that it's a very rich type overriding `str` operations to _automatically escape parameters_.
 
 This means that it's easy to create _safe_ html snippets by using `Markup` on a string literal and "formatting in" user-provided (and thus potentially unsafe) content:
 
@@ -1351,7 +1351,7 @@ Markup("<strong>&lt;R&amp;D&gt;</strong>")  # HTML is kept
 
 **Escaping** is always 100% mandatory when you mix data and code, no matter how safe the data. **Escaping** converts _TEXT_ to _CODE_. It is absolutely mandatory to do it every time you mix _DATA/TEXT_ with _CODE_ (e.g. generating HTML or python code to be evaluated inside a `safe_eval`), because _CODE_ always requires _TEXT_ to be encoded. It is critical for security, but it's also a question of correctness. Even when there is no security risk (because the text is 100% guaranteed to be safe or trusted), it is still required (e.g. to avoid breaking the layout in generated HTML). Escaping will never break any feature, as long as the developer identifies which variable contains _TEXT_ and which contains _CODE_.
 
-**Sanitizing** converts _CODE_ to _SAFER CODE_ (but not necessary _safe_ code). It does not work on _TEXT_. Sanitizing is only necessary when _CODE_ is untrusted, because it comes in full or in part from some user-provided data. If the user-provided data is in the form of _TEXT_ (e.g. content from a form filled by a user), and if that data was correctly escaped before putting it in _CODE_, then sanitizing is useless (but can still be done). If however, user-provided data was **not escaped**, then sanitizing will **not** work as expected.
+**Sanitizing** converts _CODE_ to _SAFER CODE_ (but not necessarily _safe_ code). It does not work on _TEXT_. Sanitizing is only necessary when _CODE_ is untrusted, because it comes in full or in part from some user-provided data. If the user-provided data is in the form of _TEXT_ (e.g. content from a form filled by a user), and if that data was correctly escaped before putting it in _CODE_, then sanitizing is useless (but can still be done). If however, user-provided data was **not escaped**, then sanitizing will **not** work as expected.
 
 ```python
 >>> from odoo.tools import html_escape, html_sanitize
